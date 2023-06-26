@@ -21,8 +21,7 @@ pipeline {
     stage('test') {
       steps {
         sh '''
-          npm test
-          npm test --headed --project=webkit 
+          npx playwright test --headed --project=firefox 
         '''
       }
     }
@@ -31,7 +30,7 @@ pipeline {
         always
         {
             echo 'Publish Results...'
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'test-results', reportFiles: 'cucumber-report.html', reportName: 'Tests Report', reportTitles: 'Tests Report'])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'test-results', reportFiles: 'cucumber-report.html'])
         }
     }
 }
