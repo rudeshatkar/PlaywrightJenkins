@@ -20,10 +20,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh '''
-          npx run
-          npm test --headed --project=firefox 
-        '''
+        sh 'npx playwright test'
       }
     }
   }
