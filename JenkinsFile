@@ -1,12 +1,14 @@
 
 pipeline {
   agent any
+
+  tools {nodejs "NODEJS"}
  
   stages {
     stage('install playwright') {
         steps {
         sh '''
-          npm install
+          npm i
           npx playwright install
         '''
       }
