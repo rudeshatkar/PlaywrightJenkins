@@ -2,6 +2,12 @@
 pipeline {
   agent any
  
+  stages {
+    stage('install playwright') {
+        steps {
+                sh "npx install"
+        }
+    }
     stage('help') {
       steps {
         sh 'npx playwright test --help'
