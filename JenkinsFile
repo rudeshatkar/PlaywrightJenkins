@@ -10,6 +10,7 @@ pipeline {
         sh '''
           npm i
           npx playwright install
+          npm i cucumber
         '''
       }
     }
@@ -24,4 +25,5 @@ pipeline {
       }
     }
   }
+
 }
