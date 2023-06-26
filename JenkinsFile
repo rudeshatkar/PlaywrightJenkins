@@ -1,4 +1,3 @@
-tools {nodejs "NODEJS"} 
 
 pipeline {
   agent any
