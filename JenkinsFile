@@ -1,6 +1,9 @@
 
 pipeline {
-  agent any
+  agent { label 'master' }
+  tools { nodejs "NODEJS" }
+
+  
   stages {
     stage('install playwright') {
         steps {
