@@ -5,7 +5,7 @@ pipeline {
     stage('install playwright') {
         steps {
         sh '''
-          sudo npm install npm@latest -g
+          npm install npm@latest -g
           npm install
           npx playwright install
         '''
