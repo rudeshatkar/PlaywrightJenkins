@@ -19,7 +19,8 @@ pipeline {
         sh 'npx playwright test --help'
       }
     }
-    stage('test') {
+    stage('Run tests')
+      {
       steps {
         sh 'npm test'
       }
