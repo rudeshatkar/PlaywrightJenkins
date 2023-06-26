@@ -3,10 +3,11 @@ pipeline {
   agent any
   stages {
     stage('install playwright') {
-       steps {
+        steps {
         sh '''
-          npm i --global
-          npm install --global
+          sudo npm install npm@latest -g
+          npm install
+          npx playwright install
         '''
       }
     }
