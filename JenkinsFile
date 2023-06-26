@@ -22,14 +22,8 @@ pipeline {
       steps {
         sh '''
           npx test --list
-          npm test
+          npx test
         '''
-      }
-      post {
-        success {
-          archiveArtifacts(artifacts: 'homepage-*.png', followSymlinks: false)
-          sh 'rm -rf *.png'
-        }
       }
     }
   }
