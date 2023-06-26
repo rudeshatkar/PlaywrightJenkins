@@ -24,11 +24,4 @@ pipeline {
       }
     }
   }
-  post {
-        always
-        {
-            echo 'Publish Results...'
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'test-results', reportFiles: 'cucumber-report.html'])
-        }
-    }
 }
