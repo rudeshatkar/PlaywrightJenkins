@@ -8,7 +8,7 @@ pipeline {
     stage('install playwright') {
         steps {
         sh '''
-          npm install
+          npm i
           npx playwright install
           npm i cucumber
         '''
