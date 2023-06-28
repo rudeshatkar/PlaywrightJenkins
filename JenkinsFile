@@ -19,10 +19,9 @@ pipeline {
         sh 'npx playwright test --help'
       }
     }
-    stage('Run tests')
-      {
+    stage('Run tests'){
       steps {
-        sh 'npx playwright test'
+        sh 'npm run jenkinsTag'
       }
     }
   }
