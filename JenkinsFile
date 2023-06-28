@@ -21,7 +21,10 @@ pipeline {
     }
     stage('Run tests'){
       steps {
-        sh 'npm run jenkinsTag'
+        script{
+          sh 'npm run jenkinsTag'
+        }
+        
       }
     }
   }
