@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "npx ts-node src/helper/report/init.ts",
-    "testJenkins": "cucumber-js --require cucumberJenkins.js --require src/test/features/**/*.feature --require src/test/steps/**/*.js",
+    "testJenkins": "cucumber-js --require cucumberJenkins.js --require src/test/features/*.feature --require src/test/steps/*.js",
     "jenkinsTag": "npm run testJenkins",
     "test": "cucumber-js test",
     "posttest": "npx ts-node src/helper/report/report.ts",
