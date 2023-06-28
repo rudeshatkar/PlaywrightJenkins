@@ -23,7 +23,7 @@ pipeline {
       {
       steps {
        script{
-                def command = 'npm run testJenkins'
+                def command = 'npm run jenkinsTag'
                     if (tag == 'all') {
                         sh command
                     } else {
