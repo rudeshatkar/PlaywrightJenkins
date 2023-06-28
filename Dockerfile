@@ -61,5 +61,5 @@ RUN npm install
 #Executable commands the contaioner will use [Exec Form]
 ENTRYPOINT ["npx", "playwright", "test"]
 # with cmd in this case , we can specify more parameters to the last entrypoint
-CMD ["npm run jenkinsTag '@featureTag' "]
+CMD npm run jenkinsTag 
 
