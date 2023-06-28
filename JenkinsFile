@@ -22,7 +22,8 @@ pipeline {
     stage('Run tests'){
       steps {
         script{
-          sh 'npm run jenkinsTag'
+          def command = 'npm run testJenkins'
+          sh command
         }
         
       }
