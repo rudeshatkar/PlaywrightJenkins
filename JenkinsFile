@@ -22,9 +22,14 @@ pipeline {
     stage('Run tests')
       {
       steps {
-        script{
-          sh 'npm run test'
-        }
+       script{
+                def command = 'npm run testJenkins'
+                    if (tag == 'all') {
+                        sh command
+                    } else {
+                        sh "${command} -- -t \"@${tag}\""
+                    }
+            }
         
       }
     }
