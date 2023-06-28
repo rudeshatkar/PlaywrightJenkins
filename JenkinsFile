@@ -22,10 +22,9 @@ pipeline {
     stage('Run tests')
       {
       steps {
-       script{
-                sh 'npm run jenkinsTag'
-            }
-        
+       steps {
+        sh 'npx playwright test'
+      }
       }
     }
   }
