@@ -1,4 +1,4 @@
-@123
+
 Feature: Products test
     Background: 
         Given User navigates to the application

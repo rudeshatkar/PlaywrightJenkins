@@ -1,4 +1,4 @@
-@123
+
 Feature: User Authentication Tests
 
     Background: Login Link
