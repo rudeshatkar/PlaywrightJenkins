@@ -1,9 +1,8 @@
 {
-  
   "name": "playwrightgherkin",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "type": "module",
     "pretest": "npx ts-node src/helper/report/init.ts",
