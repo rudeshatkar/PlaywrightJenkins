@@ -15,3 +15,9 @@
 /* Jenkins Password : 
 2928ba21f79c476f889b6b2acb0dfa46
 */
+
+/* Docker commands--
+docker login 
+docker tag imgname username/imgname
+docker push username/imgname
+ */
