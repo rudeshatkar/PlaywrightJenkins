@@ -1,4 +1,4 @@
-Feature: User authentication tests
+Feature: User Authentication Tests
 
     Background:
         Given User navigates to the application
