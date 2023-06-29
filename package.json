@@ -1,5 +1,6 @@
 {
-
+  
+  "type": "module",
   "name": "playwrightgherkin",
   "version": "1.0.0",
   "description": "",
