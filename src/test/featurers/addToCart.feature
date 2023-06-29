@@ -1,5 +1,5 @@
 
-Feature: Products test
+Feature: Productstest
     Background: 
         Given User navigates to the application
         And User click on login link
