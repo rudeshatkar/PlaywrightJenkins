@@ -7,7 +7,11 @@ pipeline {
   stages {
     stage('install playwright') {
         steps {
-        sh 'npx playwright install'
+        
+        sh '''
+          npx playwright install
+          npm install @cucumber/cucumber
+        '''
       }
     }
     stage('help') {

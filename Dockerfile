@@ -34,13 +34,13 @@ RUN npm --version
 RUN apt-get -y install git
 
 #install app dependencies
-COPY package.json .
+COPY package.json /
 
 #install dependencies
 RUN npm install
 
 #install app dependencies
-COPY package-lock.json .
+COPY package.json .
 
 #install dependencies
 RUN npm install
@@ -61,5 +61,5 @@ RUN npm install
 #Executable commands the contaioner will use [Exec Form]
 ENTRYPOINT ["npx", "playwright", "test"]
 # with cmd in this case , we can specify more parameters to the last entrypoint
-CMD npm run jenkinsTag 
+CMD npm run jenkinsTag "@123"
 

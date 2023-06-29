@@ -1,5 +1,6 @@
+@123
 Feature: Products test
-    Background: Login Link
+    Background: 
         Given User navigates to the application
         And User click on login link
 
