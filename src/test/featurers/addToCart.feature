@@ -1,5 +1,5 @@
 Feature: Products test
-    Background:
+    Background: Login Link
         Given User navigates to the application
         And User click on login link
 

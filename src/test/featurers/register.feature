@@ -1,6 +1,6 @@
 Feature: New user registration test
 
-    Background:
+    Background: User Register Link
     Given User Navigates to register page
 
     Scenario: New user registration
