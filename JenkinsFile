@@ -9,7 +9,7 @@ pipeline {
         steps {
         
         sh '''
-          npx install 
+          npm install 
         '''
       }
     }
