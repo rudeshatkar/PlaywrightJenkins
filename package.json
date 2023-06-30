@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-
-    "type": "module",
+    
+    
     "testJenkins": "cucumber-js --require src/test/featurers/*.feature --require src/test/steps/*.ts",
     "jenkinsTag": "npm run testJenkins -- -t",
     "test": "cucumber-js test",
