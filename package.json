@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "install": "npm pack && npm i -g foo-1.0.tgz",
     "type": "module",
     "testJenkins": "cucumber-js --require src/test/featurers/*.feature --require src/test/steps/*.ts",
     "jenkinsTag": "npm run testJenkins -- -t",
