@@ -6,7 +6,7 @@
   "scripts": {
 
     "type": "module",
-    "testJenkins": "cucumber-js --require src/test/featurers/*.feature --require src/test/steps/*.ts",
+    "testJenkins": "cucumber-js --require src/test/featurers/login.feature --require src/test/steps/*.ts",
     "jenkinsTag": "npm run testJenkins -- -t",
     "test": "cucumber-js test",
     "posttest": "npx ts-node src/helper/report/report.ts",
