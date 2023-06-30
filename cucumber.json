@@ -7,7 +7,7 @@
             "src/test/featurers/login.feature" 
         ],
         "publishQuiet": true,
-        "dryRun": false,
+        "dryRun": true,
         "require":[
             "src/test/steps/*.ts",
             "src/hooks/hooks.ts",
