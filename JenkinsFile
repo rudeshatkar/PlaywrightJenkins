@@ -10,8 +10,8 @@ pipeline {
         
         sh '''
           npx playwright install 
-          npx i
-          npx i @cucumber/cucumber
+          npm i
+          npm i @cucumber/cucumber
          
         '''
       }
