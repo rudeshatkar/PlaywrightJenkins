@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+
     "type": "module",
     "testJenkins": "cucumber-js --require src/test/featurers/*.feature --require src/test/steps/*.ts",
     "jenkinsTag": "npm run testJenkins -- -t",
@@ -17,7 +18,6 @@
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^9.2.0",
-    "@cucumber/playwright": "^3.1.0",
     "@playwright/test": "^1.35.1",
     "@types/node": "^20.3.2",
     "cross-env": "^7.0.3",
