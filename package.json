@@ -8,7 +8,7 @@
     "type": "module",
 
     "test": "cucumber-js --require cucumber.js --require src/test/steps/**/*.js --require src/test/featurers/**/*.js",
-    "testJenkins": "cucumber-js --require cucumberJenkins.js --require src/test/steps/**/*.js --require src/test/featurers/**/*.js" ,
+    "testJenkins": "cucumber-js --require cucumberJenkins.js --require src/test/steps/*.ts --require src/test/featurers/*.feature" ,
 
     "jenkinsTag": "npm run testJenkins -- -t",
    
