@@ -9,8 +9,7 @@ pipeline {
         steps {
         
         sh '''
-          npm install -g npm
-          npm install -g @cucumber/cucumber
+          npm install
         '''
       }
     }
