@@ -1,15 +1,15 @@
 {
     "compilerOptions": {
-        "target": "ES6",
         "typeRoots": [
             "./node_modules/@types",
             "src/helper/types"
         ],
         "resolveJsonModule": true,
-        "esModuleInterop": true,
+        "esModuleInterop": true ,
     },
-    "exclude": [
-        "node_modules",
-        "**/node_modules/*"
-    ]
+        "exclude": [
+            "node_modules",
+            "**/node_modules/*"
+        ]
+    
 }
