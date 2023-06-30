@@ -11,7 +11,7 @@
         "require":[
             "src/test/steps/*.ts",
             "src/hooks/hooks.ts",
-            "src/test/featurers/login.feature"
+            "src/test/featurers/*.feature"
         ],
         "requireModule":[
             "ts-node/register"
