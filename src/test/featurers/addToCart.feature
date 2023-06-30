@@ -1,4 +1,4 @@
-Feature: Product test
+Feature: Product
     Background:
         Given User navigates to the application
         And User click on login link
