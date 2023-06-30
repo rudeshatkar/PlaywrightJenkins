@@ -10,13 +10,13 @@ FROM ubuntu
 # ADD . /playwrightgherkin/
 
 #update environment
-RUN apt-get -y upgrade
-RUN apt-get -y update
-RUN apt-get -y --with-new-pkgs upgrade
-RUN apt-get -y autoremove
+# RUN apt-get -y upgrade
+# RUN apt-get -y update
+# RUN apt-get -y --with-new-pkgs upgrade
+# RUN apt-get -y autoremove
 
 #install curl
-RUN apt-get -y install curl wget
+# RUN apt-get -y install curl wget
 
 #install node
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -

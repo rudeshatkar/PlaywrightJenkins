@@ -1,5 +1,7 @@
 // npm test -- -t "@smoke" // To run tagged tests
 
+ // ln no 8 pkg.jsn "pretest": "npx ts-node src/helper/report/init.ts",
+
  
 /* ln no 25 package.json dependency for multi report
 // "dependencies": {
