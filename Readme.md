@@ -29,3 +29,10 @@ docker volume create reports
 docker build -t rudeshatkar/mydoc .   
 
  */
+
+ "test": "cucumber-js --require cucumber.js --require step-definitions/**/*.js --require features/**/*.js --format html:./reports/cucumber_report.html --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet ENV=local",
+    "testJenkins": "cucumber-js --require cucumberJenkins.js --require step-definitions/**/*.js --require features/**/*.js --format summary --format @cucumber/pretty-formatter --no-strict --publish-quiet ENV=jenkins",
+
+
+     "testJenkins": "cucumber-js --require src/test/featurers/*.feature --require src/test/steps/*.ts",
+    "test": "cucumber-js test",
