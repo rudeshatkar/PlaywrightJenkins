@@ -23,6 +23,9 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get -y install nodejs
 RUN node --version
 RUN npm --version
+# install the playwright dependencies in the work dirctory
+RUN apt-get update -qq && apt-get install -y build-essential nodejs
+
 
 
 #install chrome
@@ -37,13 +40,13 @@ RUN apt-get -y install git
 COPY package.json /
 
 #install dependencies
-RUN npm install
+
 
 #install app dependencies
 COPY package.json .
 
 #install dependencies
-RUN npm install
+
 
 #install last version of chromedriver
 RUN npm install chromedriver@*
@@ -63,9 +66,6 @@ CMD  npm run testJenkins
 
 # let us copy the useful files that we MUST use to run our scripts
 
-# install the playwright dependencies in the work dirctory
-# RUN apt-get update -qq && apt-get install -y build-essential nodejs
-# RUN npm install
 #Executable commands the contaioner will use [Exec Form]
 # ENTRYPOINT ["npx", "playwright", "test"]
 # with cmd in this case , we can specify more parameters to the last entrypoint

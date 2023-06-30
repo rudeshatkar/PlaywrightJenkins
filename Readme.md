@@ -22,4 +22,10 @@
 docker login 
 docker tag imgname username/imgname
 docker push username/imgname
+
+----------------
+
+docker volume create reports  
+docker build -t rudeshatkar/mydoc .   
+
  */
