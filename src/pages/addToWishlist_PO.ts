@@ -2,7 +2,7 @@ import { expect, Page } from "@playwright/test";
 import PlaywrightWrapper from "../helper/wrapper/playwrightWrapper";
 
 
-export default class login_PO {
+export default class addToWishlist_PO {
     
     constructor(private page: Page) {
        

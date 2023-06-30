@@ -1,7 +1,7 @@
 
-Feature: Producttest
+Feature: Product test
     Background: 
-        Given User navigates to the application
+        Given user navigates to the application
         And User click on login link
 
     Scenario Outline: Add to cart

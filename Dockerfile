@@ -9,14 +9,14 @@ FROM ubuntu
 # WORKDIR /playwrightgherkin
 # ADD . /playwrightgherkin/
 
-#update environment
-# RUN apt-get -y upgrade
-# RUN apt-get -y update
-# RUN apt-get -y --with-new-pkgs upgrade
-# RUN apt-get -y autoremove
+# update environment
+RUN apt-get -y upgrade
+RUN apt-get -y update
+RUN apt-get -y --with-new-pkgs upgrade
+RUN apt-get -y autoremove
 
-#install curl
-# RUN apt-get -y install curl wget
+# install curl
+RUN apt-get -y install curl wget
 
 #install node
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
@@ -46,6 +46,14 @@ COPY package.json .
 RUN npm install
 
 #install last version of chromedriver
+RUN npm install chromedriver@*
+
+# Bundle app source
+COPY . /
+
+CMD  npm run testJenkins
+
+#install last version of chromedriver
 # RUN npm install chromedriver@*
 
 # Bundle app source
@@ -59,7 +67,7 @@ RUN npm install
 # RUN apt-get update -qq && apt-get install -y build-essential nodejs
 # RUN npm install
 #Executable commands the contaioner will use [Exec Form]
-ENTRYPOINT ["npx", "playwright", "test"]
+# ENTRYPOINT ["npx", "playwright", "test"]
 # with cmd in this case , we can specify more parameters to the last entrypoint
-CMD npm run testJenkins
+# CMD npm test
 
