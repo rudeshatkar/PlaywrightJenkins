@@ -1,7 +1,7 @@
 
 #Use this for a quick build
 
-FROM ubuntu
+FROM mcr.microsoft.com/playwright:v1.18.1-focal
 
 # # create a folder where our project will be stored
 # RUN mkdir /playwrightgherkin

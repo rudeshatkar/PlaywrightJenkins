@@ -11,8 +11,6 @@ pipeline {
         sh '''
           npm install -g npm
           npm install -g @cucumber/cucumber
-          npm install -g playwrightgherkin@1.0.0
-
         '''
       }
     }
