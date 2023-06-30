@@ -10,7 +10,8 @@
         "dryRun": false,
         "require":[
             "src/test/steps/*.ts",
-            "src/hooks/hooks.ts"
+            "src/hooks/hooks.ts",
+            "src/test/featurers/login.feature"
         ],
         "requireModule":[
             "ts-node/register"
