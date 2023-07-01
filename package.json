@@ -7,8 +7,9 @@
     
     "type": "module",
     "test": "cucumber-js test",
+    "testcase": "npm test --headed --project=chromium",
     "testJenkins": "cucumber-js -r cucumberJenkins.js -r src/test/featurers/*.feature --require src/test/steps/*.ts" ,
-    "jenkinsTag": "npm run testJenkins",
+    "jenkinsTag": "npm run testJenkins -- -t",
     "posttest": "npx ts-node src/helper/report/report.ts",
     "test:failed": "cucumber-js -p rerun @rerun.txt",
     "tag": "npm test -- -t"  
