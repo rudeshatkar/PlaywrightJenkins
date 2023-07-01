@@ -10,8 +10,6 @@ pipeline {
         
         sh '''
           npm install -g
-          npm install --save-dev @cucumber/cucumber -g
-          npm init playwright@latest -g
         '''
       }
     }
