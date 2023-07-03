@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    
+    "pretest": "npx ts-node src/helper/report/init.ts",
     "type": "module",
     "test": "cucumber-js test",
     "testcase": "npm test --headed --project=chromium",

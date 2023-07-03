@@ -37,9 +37,7 @@ After(async function ({ pickle, result }) {
     // attach screenshot //
     if (result?.status == Status.FAILED) {
         img = await pageFixture.page.screenshot({ path: `./test-results/screenshots/"${pickle.name}.png`, type:"png"})
-        
         videoPath = await pageFixture.page.video().path()
-
         await this.attach(img, "image/png")
         await this.attach(fs.readFileSync(videoPath), "video/webm")
     }
