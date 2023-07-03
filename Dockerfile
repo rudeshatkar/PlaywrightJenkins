@@ -19,6 +19,7 @@ RUN apt-get -y autoremove
 RUN apt-get -y install curl wget
 
 #install node
+RUN npm install
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get -y install nodejs
 RUN node --version
@@ -49,7 +50,7 @@ COPY package.json .
 
 
 #install last version of chromedriver
-RUN npm install chromedriver@*
+# RUN npm install chromedriver@*
 
 # Bundle app source
 COPY . /
