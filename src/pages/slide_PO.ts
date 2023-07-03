@@ -27,7 +27,7 @@ export default class slide_PO {
         }
         await this.page.waitForLoadState() 
         await this.page.isVisible(this.Elements.bookCount)
-        let price = await this.page.textContent(this.Elements.bookPrice)
-        console.log(price)
+        // let price = await this.page.textContent(this.Elements.bookPrice)
+        // console.log(price)
     }
 }
