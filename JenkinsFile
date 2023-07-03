@@ -2,14 +2,22 @@
 pipeline {
   agent any
 
-  tools {nodejs "NODEJS"}
+  tools {nodejs "NODEJS"
+    
  
   stages {
-    stage('install playwright') {
+
+    stage('Pre-cleanup') {
+      steps {
+        sh 'rm -rf ./node_modules'
+      }
+    }
+
+    stage('install node') {
         steps {
         
         sh '''
-          npm install -g
+          npm install
         '''
       }
     }
@@ -20,12 +28,19 @@ pipeline {
     }
     stage('Run tests'){
       steps {
-        
           sh 'npm run testcase'
-        
-        
       }
     }
+
+    post {
+    failure {
+      echo 'Processing failed'
+    }
+    success {
+      echo 'Processing succeeded'
+    }
+  }
+  }
   }
 
 }
