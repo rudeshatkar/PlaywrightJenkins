@@ -31,15 +31,6 @@ pipeline {
           sh 'npm run testcase'
       }
     }
-
-    post {
-      failure {
-        echo 'Processing failed'
-      }
-      success {
-        echo 'Processing succeeded'
-      }
-    }
   }
 }
 
