@@ -12,6 +12,6 @@ When('User set the slider range to {string}', async function (range) {
     await slide.slideTheRange(range)
 
 });
-Then('The range should be applied', async function () {
+// Then('The range should be applied', async function () {
     
-});
+// });

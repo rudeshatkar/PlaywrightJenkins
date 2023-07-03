@@ -4,7 +4,7 @@ import { pageFixture } from "./pageFixture";
 import { invokeBrowser } from "../helper/browsers/browserManager";
 import { getEnv } from "../helper/env/env";
 
-const fs = require("fs-extra")
+import fs from "fs-extra";
 
 let browser:Browser
 let context: BrowserContext

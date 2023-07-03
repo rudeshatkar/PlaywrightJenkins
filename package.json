@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "pretest": "npx ts-node src/helper/report/init.ts",
     "type": "module",
+    "pretest": "npx ts-node src/helper/report/init.ts",
     "test": "cucumber-js test",
-    "testcase": "npm test --headed --project=chromium",
     "testJenkins": "cucumber-js -r cucumberJenkins.js -r src/test/featurers/*.feature --require src/test/steps/*.ts" ,
     "jenkinsTag": "npm run testJenkins -- -t",
     "posttest": "npx ts-node src/helper/report/report.ts",
