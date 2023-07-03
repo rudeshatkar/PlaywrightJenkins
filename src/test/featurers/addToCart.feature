@@ -1,4 +1,3 @@
-@smoke
 Feature: Product
     Background:
         Given User navigates to the application
