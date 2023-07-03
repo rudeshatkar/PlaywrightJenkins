@@ -2,7 +2,7 @@
 pipeline {
   agent any
 
-  tools {nodejs "NODEJS"
+  tools {nodejs "NODEJS"}
     
  
   stages {
@@ -33,14 +33,13 @@ pipeline {
     }
 
     post {
-    failure {
-      echo 'Processing failed'
+      failure {
+        echo 'Processing failed'
+      }
+      success {
+        echo 'Processing succeeded'
+      }
     }
-    success {
-      echo 'Processing succeeded'
-    }
   }
-  }
-  }
-
 }
+
