@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/playwright:v1.18.1-focal
 # # create a folder where our project will be stored
 # RUN mkdir /playwrightgherkin
 # # we make it our work directory
-# WORKDIR /playwrightgherkin
+WORKDIR /playwrightgherkin
 # ADD . /playwrightgherkin/
 
 # update environment
@@ -38,10 +38,12 @@ RUN apt-get update -qq && apt-get install -y build-essential nodejs
 RUN apt-get -y install git
 
 #install app dependencies
-COPY package.json /
+COPY package*.json ./
 
 #install dependencies
 
+# Bundle app source
+COPY . .
 
 #install app dependencies
 COPY package.json .
